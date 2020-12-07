@@ -2,151 +2,130 @@
 {{> AppSidebar/sidebar dashboards-analytics=this }}
 
 <div class="app-main__outer">
-    <div class="app-main__inner">
-        {{> AppMain/page-title }}
-        <ul class="body-tabs body-tabs-layout tabs-animated body-tabs-animated nav">
-            <li class="nav-item">
-                <a role="tab" class="nav-link active" href="index.html">
-                    <span>Gamli Hundur</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a role="tab" class="nav-link" href="analytics-variation.html">
-                    <span>Variation 2</span>
-                </a>
-            </li>
-        </ul>
-
-         <div class="tab-content">
-            <div class="tab-pane tabs-animation fade show active" id="tab-content-0" role="tabpanel">
-                <div class="row">
-
-                    <div class="col-md-6">
-                        <div class="main-card mb-3 card">
-                            <div class="card-body">
-                                <h5 class="card-title">Pie Chart</h5>
-                                <canvas id="chart-area"></canvas>
-                            </div>
-                        </div>
-
-                        <div class="main-card mb-3 card">
-                            <div class="card-body">
-                                <h5 class="card-title">Radar Chart</h5>
-                                <canvas id="radar-chart"></canvas>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+  <div class="app-main__inner">
+    {{&gt; AppMain/page-title }}
+    <ul class="body-tabs body-tabs-layout tabs-animated body-tabs-animated nav">
+      <li class="nav-item">
+        <a role="tab" class="nav-link active" href="index.html"><span>Gamli Hundur</span></a>
+      </li>
+      <li class="nav-item">
+        <a role="tab" class="nav-link" href="analytics-variation.html"><span>Variation 2</span></a>
+      </li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane tabs-animation fade show active" id="tab-content-0" role="tabpanel">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="main-card mb-3 card">
+              <div class="card-body">
+                <h5 class="card-title">Pie Chart</h5>
+                <canvas id="chart-area"></canvas>
+              </div>
             </div>
+            <div class="main-card mb-3 card">
+              <div class="card-body">
+                <h5 class="card-title">Radar Chart</h5>
+                <canvas id="radar-chart"></canvas>
+              </div>
+            </div>
+          </div>
         </div>
-
-
-
-         <div class="row">
-            <div class="col-md-6 col-xl-3">
-                <div class="card mb-3 widget-chart widget-chart2 text-left card-btm-border card-shadow-success border-success">
-                     <div class="widget-chat-wrapper-outer">
-                            <div class="widget-chart-content pt-3 pl-3 pb-1">
-                                <div class="widget-chart-flex">
-                                    <div class="widget-numbers">
-                                        <div class="widget-chart-flex">
-                                            <div class="fsize-4">
-                                                <small class="opacity-5">%</small>
-                                                <span>15</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h6 class="widget-subheading mb-0 opacity-5">CO2 Emsission from Fuel and Cement</h6>
-                            </div>
-                            <div class="no-gutters widget-chart-wrapper mt-3 mb-3 pl-2 he-auto row">
-                                <div class="col-md-9">
-                                    <div id="dashboard-sparklines-1"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-xl-3">
-                    <div class="card mb-3 widget-chart widget-chart2 text-left card-btm-border card-shadow-primary border-primary">
-                        <div class="widget-chat-wrapper-outer">
-                            <div class="widget-chart-content pt-3 pl-3 pb-1">
-                                <div class="widget-chart-flex">
-                                    <div class="widget-numbers">
-                                        <div class="widget-chart-flex">
-                                            <div class="fsize-4">
-                                                <small class="opacity-5">F°</small>
-                                                <span>0.4</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h6 class="widget-subheading mb-0 opacity-5">Temperature Increase</h6>
-                            </div>
-                            <div class="no-gutters widget-chart-wrapper mt-3 mb-3 pl-2 he-auto row">
-                                <div class="col-md-9">
-                                    <div id="dashboard-sparklines-2"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-xl-3">
-                    <div class="card mb-3 widget-chart widget-chart2 text-left card-btm-border card-shadow-warning border-warning">
-                        <div class="widget-chat-wrapper-outer">
-                            <div class="widget-chart-content pt-3 pl-3 pb-1">
-                                <div class="widget-chart-flex">
-                                    <div class="widget-numbers">
-                                        <div class="widget-chart-flex">
-                                            <div class="fsize-4">
-                                                <small class="opacity-5">″</small>
-                                                <span>2.2</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h6 class="widget-subheading mb-0 opacity-5">Sea Level Change</h6>
-                            </div>
-                            <div class="no-gutters widget-chart-wrapper mt-3 mb-3 pl-2 he-auto row">
-                                <div class="col-md-9">
-                                    <div id="dashboard-sparklines-3"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-xl-3">
-                    <div class="card mb-3 widget-chart widget-chart2 text-left card-btm-border card-shadow-danger border-danger">
-                        <div class="widget-chat-wrapper-outer">
-                            <div class="widget-chart-content pt-3 pl-3 pb-1">
-                                <div class="widget-chart-flex">
-                                    <div class="widget-numbers">
-                                        <div class="widget-chart-flex">
-                                            <div class="fsize-4">
-                                                <small class="opacity-5">%</small>
-                                                <span>4</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                    <h6 class="widget-subheading mb-0 opacity-5">Sea Level Change</h6>
-                            </div>
-                            <div class="no-gutters widget-chart-wrapper mt-3 mb-3 pl-2 he-auto row">
-                                <div class="col-md-9">
-                                    <div id="dashboard-sparklines-4"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>                         
-                
-        </div>
+      </div>
     </div>
-    {{> AppFooter/footer }}
+    <div class="row">
+      <div class="col-md-6 col-xl-3">
+        <div class="card mb-3 widget-chart widget-chart2 text-left card-btm-border card-shadow-success border-success">
+          <div class="widget-chat-wrapper-outer">
+            <div class="widget-chart-content pt-3 pl-3 pb-1">
+              <div class="widget-chart-flex">
+                <div class="widget-numbers">
+                  <div class="widget-chart-flex">
+                    <div class="fsize-4">
+                      <small class="opacity-5">%</small> <span>15</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h6 class="widget-subheading mb-0 opacity-5">CO2 Emsission from Fuel and Cement</h6>
+            </div>
+            <div class="no-gutters widget-chart-wrapper mt-3 mb-3 pl-2 he-auto row">
+              <div class="col-md-9">
+                <div id="dashboard-sparklines-1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-xl-3">
+        <div class="card mb-3 widget-chart widget-chart2 text-left card-btm-border card-shadow-primary border-primary">
+          <div class="widget-chat-wrapper-outer">
+            <div class="widget-chart-content pt-3 pl-3 pb-1">
+              <div class="widget-chart-flex">
+                <div class="widget-numbers">
+                  <div class="widget-chart-flex">
+                    <div class="fsize-4">
+                      <small class="opacity-5">F°</small> <span>0.4</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h6 class="widget-subheading mb-0 opacity-5">Temperature Increase</h6>
+            </div>
+            <div class="no-gutters widget-chart-wrapper mt-3 mb-3 pl-2 he-auto row">
+              <div class="col-md-9">
+                <div id="dashboard-sparklines-2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-xl-3">
+        <div class="card mb-3 widget-chart widget-chart2 text-left card-btm-border card-shadow-warning border-warning">
+          <div class="widget-chat-wrapper-outer">
+            <div class="widget-chart-content pt-3 pl-3 pb-1">
+              <div class="widget-chart-flex">
+                <div class="widget-numbers">
+                  <div class="widget-chart-flex">
+                    <div class="fsize-4">
+                      <small class="opacity-5">″</small> <span>2.2</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h6 class="widget-subheading mb-0 opacity-5">Sea Level Change</h6>
+            </div>
+            <div class="no-gutters widget-chart-wrapper mt-3 mb-3 pl-2 he-auto row">
+              <div class="col-md-9">
+                <div id="dashboard-sparklines-3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-xl-3">
+        <div class="card mb-3 widget-chart widget-chart2 text-left card-btm-border card-shadow-danger border-danger">
+          <div class="widget-chat-wrapper-outer">
+            <div class="widget-chart-content pt-3 pl-3 pb-1">
+              <div class="widget-chart-flex">
+                <div class="widget-numbers">
+                  <div class="widget-chart-flex">
+                    <div class="fsize-4">
+                      <small class="opacity-5">%</small> <span>4</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h6 class="widget-subheading mb-0 opacity-5">Sea Level Change</h6>
+            </div>
+            <div class="no-gutters widget-chart-wrapper mt-3 mb-3 pl-2 he-auto row">
+              <div class="col-md-9">
+                <div id="dashboard-sparklines-4"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 {{/ base }}
