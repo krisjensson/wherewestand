@@ -11,16 +11,7 @@ const pages = [
     },
     template: "./src/wherewestand.hbs",
   },
-    {
-    output: "./charts-chartjs.html",
-    content: {
-      title: "ChartJS",
-      description:
-        "Huge selection of charts created with the React ChartJS Plugin",
-      heading_icon: "pe-7s-bandaid icon-gradient bg-amy-crisp",
-    },
-    template: "./src/wherewestand.hbs",
-  },
+  
   
   
 ];
