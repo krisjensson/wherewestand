@@ -173,7 +173,7 @@ $widget-spacer: $spacer;
 
     .widget-chart-content {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-content: center;
       flex: 1;
       position: relative;
@@ -312,7 +312,7 @@ $widget-spacer: $spacer;
   .widget-chat-wrapper-outer {
     display: flex;
     flex: 1;
-    flex-direction: column;
+    flex-direction: row;
     max-width: 100%;
 
     .widget-chart-wrapper {
